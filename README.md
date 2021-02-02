@@ -1,6 +1,6 @@
 # Welcome to Twitterizor!
 
-This is my example solution for Jack Henry. Did not go with a classic architecture, using a different approach than normal just to show what I can do. (Lazy Singletons, etc, since I'm not using a database-backed solution) Hope you enjoy. I also constrained myself to using ONLY Microsoft NuGET packages, no third party libraries used except that ones that are contained in a new project by default. (Like jQuery, Bootstrap, etc.)
+This is my example solution for Jack Henry. Did not go with a classic architecture, using a different approach than normal just to show what I can do. (Lazy Singletons, etc, since I'm not using a database-backed solution) Hope you enjoy. I also constrained myself to using ONLY Microsoft NuGET packages, no third party libraries used except that ones that are contained in a new project by default. (Like jQuery, Bootstrap, etc.) All is written in .NET 5.0 rather than .NET Core or .NET Framework.
 
 # API Keys	
 
