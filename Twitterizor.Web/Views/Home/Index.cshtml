@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Twitterizor</h1>
+    <h3>Total Tweets: <span id="totalTweets">0</span></h3>
+</div>
+<div>
+    <button id="btnUpdating" class="btn btn-primary btn-sm" type="button" onclick="Updating()">Stop Updating</button> 
+    <button class="btn btn-danger btn-sm" type="button" onclick="Reset()">Reset Stats</button>
+</div>
+<div>
+    <h3>Tweet Frequency</h3>
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr>
+                <th>Per Hour</th>
+                <th>Per Minute</th>
+                <th>Per Second</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span id="tweetsPerHour">0</span></td>
+                <td><span id="tweetsPerMinute">0</span></td>
+                <td><span id="tweetsPerSecond">0</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <h3>Stats</h3>
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr>
+                <th>Tweets With Emojis</th>
+                <th>Tweets With URLs</th>
+                <th>Tweets With Photo URLs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span id="tweetsWithEmojisPercent">0</span></td>
+                <td><span id="tweetsWithUrlsPercent">0</span></td>
+                <td><span id="tweetsWithPhotoUrlsPercent">0</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="bg-light">
+    <div class="float-left bg-dark text-light">
+        <h3 class="text-center">Top Emojis</h3>
+        <table class="table table-bordered table-sm text-light">
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Emoji</th>
+                    <th>Times</th>
+                </tr>
+            </thead>
+            <tbody id="topEmojis">
+            </tbody>
+        </table>
+    </div>
+    <div class="float-left ml-4 bg-dark text-light">
+        <h3 class="text-center">Top Domains</h3>
+        <table class="table table-bordered table-sm text-light">
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Domain</th>
+                    <th>Times</th>
+                </tr>
+            </thead>
+            <tbody id="topDomains">
+            </tbody>
+        </table>
+    </div>
+    <div class="float-left ml-4 bg-dark text-light">
+        <h3 class="text-center">Top Hashtags</h3>
+        <table class="table table-bordered table-sm text-light">
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Hashtag</th>
+                    <th>Times</th>
+                </tr>
+            </thead>
+            <tbody id="topHashtags">
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+@section scripts {
+    <script src="~/ViewScripts/Home/Index.js"></script>
+    <script>
+        var baseDir = "@Url.Content("https://localhost:44349/api/")";
+    </script>
+}
